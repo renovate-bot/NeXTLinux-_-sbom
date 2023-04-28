@@ -1,0 +1,114 @@
+{
+ "artifacts": [
+  {
+   "id": "66ba429119b8bec6",
+   "name": "package-1",
+   "version": "1.0.1",
+   "type": "python",
+   "foundBy": "the-cataloger-1",
+   "locations": [
+    {
+     "path": "/somefile-1.txt",
+     "layerID": "sha256:7e139310bd6ce0956d65a70d26a6d31b240a4f47094a831638f05d381b6c424a"
+    }
+   ],
+   "licenses": [
+    "MIT"
+   ],
+   "language": "python",
+   "cpes": [
+    "cpe:2.3:*:some:package:1:*:*:*:*:*:*:*"
+   ],
+   "purl": "a-purl-1",
+   "metadataType": "PythonPackageMetadata",
+   "metadata": {
+    "name": "package-1",
+    "version": "1.0.1",
+    "license": "",
+    "author": "",
+    "authorEmail": "",
+    "platform": "",
+    "sitePackagesRootPath": ""
+   }
+  },
+  {
+   "id": "958443e2d9304af4",
+   "name": "package-2",
+   "version": "2.0.1",
+   "type": "deb",
+   "foundBy": "the-cataloger-2",
+   "locations": [
+    {
+     "path": "/somefile-2.txt",
+     "layerID": "sha256:cc833bf31a480c064d65ca67ee37f77f0d0c8ab98eedde7b286ad1ef6f5bdcac"
+    }
+   ],
+   "licenses": [],
+   "language": "",
+   "cpes": [
+    "cpe:2.3:*:some:package:2:*:*:*:*:*:*:*"
+   ],
+   "purl": "pkg:deb/debian/package-2@2.0.1",
+   "metadataType": "DpkgMetadata",
+   "metadata": {
+    "package": "package-2",
+    "source": "",
+    "version": "2.0.1",
+    "sourceVersion": "",
+    "architecture": "",
+    "maintainer": "",
+    "installedSize": 0,
+    "files": null
+   }
+  }
+ ],
+ "artifactRelationships": [],
+ "source": {
+  "id": "0af8fa79f5497297e4e32f3e03de14ac20ad695159df0ac8373e6543614b9a50",
+  "type": "image",
+  "target": {
+   "userInput": "user-image-input",
+   "imageID": "sha256:0cb4395791986bda17562bd6f76811bb6f163f686e198397197ef8241bed58df",
+   "manifestDigest": "sha256:2731251dc34951c0e50fcc643b4c5f74922dad1a5d98f302b504cf46cd5d9368",
+   "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+   "tags": [
+    "stereoscope-fixture-image-simple:85066c51088bdd274f7a89e99e00490f666c49e72ffc955707cd6e18f0e22c5b"
+   ],
+   "imageSize": 38,
+   "layers": [
+    {
+     "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+     "digest": "sha256:7e139310bd6ce0956d65a70d26a6d31b240a4f47094a831638f05d381b6c424a",
+     "size": 22
+    },
+    {
+     "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+     "digest": "sha256:cc833bf31a480c064d65ca67ee37f77f0d0c8ab98eedde7b286ad1ef6f5bdcac",
+     "size": 16
+    }
+   ],
+   "manifest": "eyJzY2hlbWFWZXJzaW9uIjoyLCJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmRpc3RyaWJ1dGlvbi5tYW5pZmVzdC52Mitqc29uIiwiY29uZmlnIjp7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuY29udGFpbmVyLmltYWdlLnYxK2pzb24iLCJzaXplIjo2NzEsImRpZ2VzdCI6InNoYTI1NjowY2I0Mzk1NzkxOTg2YmRhMTc1NjJiZDZmNzY4MTFiYjZmMTYzZjY4NmUxOTgzOTcxOTdlZjgyNDFiZWQ1OGRmIn0sImxheWVycyI6W3sibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLmRvY2tlci5pbWFnZS5yb290ZnMuZGlmZi50YXIuZ3ppcCIsInNpemUiOjIwNDgsImRpZ2VzdCI6InNoYTI1Njo3ZTEzOTMxMGJkNmNlMDk1NmQ2NWE3MGQyNmE2ZDMxYjI0MGE0ZjQ3MDk0YTgzMTYzOGYwNWQzODFiNmM0MjRhIn0seyJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmltYWdlLnJvb3Rmcy5kaWZmLnRhci5nemlwIiwic2l6ZSI6MjA0OCwiZGlnZXN0Ijoic2hhMjU2OmNjODMzYmYzMWE0ODBjMDY0ZDY1Y2E2N2VlMzdmNzdmMGQwYzhhYjk4ZWVkZGU3YjI4NmFkMWVmNmY1YmRjYWMifV19",
+   "config": "eyJhcmNoaXRlY3R1cmUiOiJhcm02NCIsImNvbmZpZyI6eyJFbnYiOlsiUEFUSD0vdXNyL2xvY2FsL3NiaW46L3Vzci9sb2NhbC9iaW46L3Vzci9zYmluOi91c3IvYmluOi9zYmluOi9iaW4iXSwiV29ya2luZ0RpciI6Ii8iLCJPbkJ1aWxkIjpudWxsfSwiY3JlYXRlZCI6IjIwMjMtMDQtMThUMTQ6MDk6NDIuMzAxMDI2MzhaIiwiaGlzdG9yeSI6W3siY3JlYXRlZCI6IjIwMjMtMDQtMThUMTQ6MDk6NDIuMjg3OTQyNzEzWiIsImNyZWF0ZWRfYnkiOiJBREQgZmlsZS0xLnR4dCAvc29tZWZpbGUtMS50eHQgIyBidWlsZGtpdCIsImNvbW1lbnQiOiJidWlsZGtpdC5kb2NrZXJmaWxlLnYwIn0seyJjcmVhdGVkIjoiMjAyMy0wNC0xOFQxNDowOTo0Mi4zMDEwMjYzOFoiLCJjcmVhdGVkX2J5IjoiQUREIGZpbGUtMi50eHQgL3NvbWVmaWxlLTIudHh0ICMgYnVpbGRraXQiLCJjb21tZW50IjoiYnVpbGRraXQuZG9ja2VyZmlsZS52MCJ9XSwib3MiOiJsaW51eCIsInJvb3RmcyI6eyJ0eXBlIjoibGF5ZXJzIiwiZGlmZl9pZHMiOlsic2hhMjU2OjdlMTM5MzEwYmQ2Y2UwOTU2ZDY1YTcwZDI2YTZkMzFiMjQwYTRmNDcwOTRhODMxNjM4ZjA1ZDM4MWI2YzQyNGEiLCJzaGEyNTY6Y2M4MzNiZjMxYTQ4MGMwNjRkNjVjYTY3ZWUzN2Y3N2YwZDBjOGFiOThlZWRkZTdiMjg2YWQxZWY2ZjViZGNhYyJdfX0=",
+   "repoDigests": [],
+   "architecture": "",
+   "os": ""
+  }
+ },
+ "distro": {
+  "prettyName": "debian",
+  "name": "debian",
+  "id": "debian",
+  "idLike": [
+   "like!"
+  ],
+  "version": "1.2.3",
+  "versionID": "1.2.3"
+ },
+ "descriptor": {
+  "name": "sbom",
+  "version": "v0.42.0-bogus",
+  "configuration": {
+   "config-key": "config-value"
+  }
+ }
+}

@@ -1,0 +1,129 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:redacted",
+  "version": 1,
+  "metadata": {
+    "timestamp": "timestamp:redacted",
+    "tools": [
+      {
+        "vendor": "nextlinux",
+        "name": "sbom",
+        "version": "v0.42.0-bogus"
+      }
+    ],
+    "component": {
+      "bom-ref": "redacted",
+      "type": "container",
+      "name": "user-image-input",
+      "version": "sha256:redacted"
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "redacted",
+      "type": "library",
+      "name": "package-1",
+      "version": "1.0.1",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:*:some:package:1:*:*:*:*:*:*:*",
+      "purl": "a-purl-1",
+      "properties": [
+        {
+          "name": "sbom:package:foundBy",
+          "value": "the-cataloger-1"
+        },
+        {
+          "name": "sbom:package:language",
+          "value": "python"
+        },
+        {
+          "name": "sbom:package:metadataType",
+          "value": "PythonPackageMetadata"
+        },
+        {
+          "name": "sbom:package:type",
+          "value": "python"
+        },
+        {
+          "name": "sbom:location:0:layerID",
+          "value": "sha256:redacted"
+        },
+        {
+          "name": "sbom:location:0:path",
+          "value": "/somefile-1.txt"
+        }
+      ]
+    },
+    {
+      "bom-ref": "redacted",
+      "type": "library",
+      "name": "package-2",
+      "version": "2.0.1",
+      "cpe": "cpe:2.3:*:some:package:2:*:*:*:*:*:*:*",
+      "purl": "pkg:deb/debian/package-2@2.0.1",
+      "properties": [
+        {
+          "name": "sbom:package:foundBy",
+          "value": "the-cataloger-2"
+        },
+        {
+          "name": "sbom:package:metadataType",
+          "value": "DpkgMetadata"
+        },
+        {
+          "name": "sbom:package:type",
+          "value": "deb"
+        },
+        {
+          "name": "sbom:location:0:layerID",
+          "value": "sha256:redacted"
+        },
+        {
+          "name": "sbom:location:0:path",
+          "value": "/somefile-2.txt"
+        },
+        {
+          "name": "sbom:metadata:installedSize",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "operating-system",
+      "name": "debian",
+      "version": "1.2.3",
+      "description": "debian",
+      "swid": {
+        "tagId": "debian",
+        "name": "debian",
+        "version": "1.2.3"
+      },
+      "properties": [
+        {
+          "name": "sbom:distro:id",
+          "value": "debian"
+        },
+        {
+          "name": "sbom:distro:idLike:0",
+          "value": "like!"
+        },
+        {
+          "name": "sbom:distro:prettyName",
+          "value": "debian"
+        },
+        {
+          "name": "sbom:distro:versionID",
+          "value": "1.2.3"
+        }
+      ]
+    }
+  ]
+}

@@ -14,7 +14,7 @@ import (
 	"github.com/spf13/viper"
 	"gopkg.in/yaml.v2"
 
-	"github.com/nextlinux/go-logger"
+	logger "github.com/nextlinux/gologger"
 	"github.com/nextlinux/sbom/internal"
 	"github.com/nextlinux/sbom/internal/log"
 	"github.com/nextlinux/sbom/sbom/pkg/cataloger"

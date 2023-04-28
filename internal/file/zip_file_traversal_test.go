@@ -49,7 +49,7 @@ func TestUnzipToDir(t *testing.T) {
 	sourceDirPath := path.Join(goldenRootDir, "zip-source")
 	archiveFilePath := setupZipFileTest(t, sourceDirPath, false)
 
-	unzipDestinationDir, err := ioutil.TempDir("", "syft-ziputil-contents-TEST-")
+	unzipDestinationDir, err := ioutil.TempDir("", "sbom-ziputil-contents-TEST-")
 	t.Cleanup(assertNoError(t, func() error {
 		return os.RemoveAll(unzipDestinationDir)
 	}))
@@ -170,7 +170,7 @@ func prependZipSourceFixtureWithString(tb testing.TB, value string) func(tb test
 		archivePath := prepZipSourceFixture(t)
 
 		// create a temp file
-		tmpFile, err := ioutil.TempFile("", "syft-ziputil-prependZipSourceFixtureWithString-")
+		tmpFile, err := ioutil.TempFile("", "sbom-ziputil-prependZipSourceFixtureWithString-")
 		if err != nil {
 			t.Fatalf("unable to create tempfile: %+v", err)
 		}
@@ -209,7 +209,7 @@ func prependZipSourceFixtureWithString(tb testing.TB, value string) func(tb test
 
 func prepZipSourceFixture(t testing.TB) string {
 	t.Helper()
-	archivePrefix, err := ioutil.TempFile("", "syft-ziputil-prepZipSourceFixture-")
+	archivePrefix, err := ioutil.TempFile("", "sbom-ziputil-prepZipSourceFixture-")
 	if err != nil {
 		t.Fatalf("unable to create tempfile: %+v", err)
 	}

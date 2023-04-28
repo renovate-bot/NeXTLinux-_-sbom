@@ -73,7 +73,7 @@ func assertNoError(t testing.TB, fn func() error) func() {
 func setupZipFileTest(t testing.TB, sourceDirPath string, zip64 bool) string {
 	t.Helper()
 
-	archivePrefix, err := ioutil.TempFile("", "syft-ziputil-archive-TEST-")
+	archivePrefix, err := ioutil.TempFile("", "sbom-ziputil-archive-TEST-")
 	if err != nil {
 		t.Fatalf("unable to create tempfile: %+v", err)
 	}

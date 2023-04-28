@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -ue
 
-BIN="syft"
+BIN="sbom"
 DISTDIR=$1
 VERSION=$2
 

@@ -5,7 +5,7 @@ import (
 
 	"github.com/scylladb/go-set/strset"
 
-	"github.com/anchore/sbom/sbom/file"
+	"github.com/nextlinux/sbom/sbom/file"
 )
 
 const DpkgDBGlob = "**/var/lib/dpkg/{status,status.d/**}"

@@ -7,10 +7,10 @@ import (
 
 	rpmdb "github.com/knqyf263/go-rpmdb/pkg"
 
-	"github.com/anchore/packageurl-go"
-	"github.com/anchore/sbom/sbom/linux"
-	"github.com/anchore/sbom/sbom/pkg"
-	"github.com/anchore/sbom/sbom/source"
+	"github.com/nextlinux/packageurl-go"
+	"github.com/nextlinux/sbom/sbom/linux"
+	"github.com/nextlinux/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/source"
 )
 
 func newPackage(location source.Location, metadata pkg.RpmMetadata, distro *linux.Release) pkg.Package {

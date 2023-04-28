@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/anchore/sbom/sbom/cpe"
-	"github.com/anchore/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/cpe"
+	"github.com/nextlinux/sbom/sbom/pkg"
 )
 
 func Test_disallowJenkinsServerCPEForPluginPackage(t *testing.T) {

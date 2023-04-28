@@ -6,11 +6,11 @@ import (
 	"io"
 	"strings"
 
-	"github.com/anchore/sbom/internal/log"
-	"github.com/anchore/sbom/sbom/artifact"
-	"github.com/anchore/sbom/sbom/pkg"
-	"github.com/anchore/sbom/sbom/pkg/cataloger/generic"
-	"github.com/anchore/sbom/sbom/source"
+	"github.com/nextlinux/sbom/internal/log"
+	"github.com/nextlinux/sbom/sbom/artifact"
+	"github.com/nextlinux/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/pkg/cataloger/generic"
+	"github.com/nextlinux/sbom/sbom/source"
 )
 
 // Parses an RPM manifest file, as used in Mariner distroless containers, and returns the Packages listed

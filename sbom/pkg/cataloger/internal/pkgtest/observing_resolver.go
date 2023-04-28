@@ -7,7 +7,7 @@ import (
 
 	"github.com/scylladb/go-set/strset"
 
-	"github.com/anchore/sbom/sbom/source"
+	"github.com/nextlinux/sbom/sbom/source"
 )
 
 var _ source.FileResolver = (*ObservingResolver)(nil)

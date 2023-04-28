@@ -7,10 +7,10 @@ import (
 
 	"gopkg.in/yaml.v3"
 
-	"github.com/anchore/sbom/sbom/artifact"
-	"github.com/anchore/sbom/sbom/pkg"
-	"github.com/anchore/sbom/sbom/pkg/cataloger/generic"
-	"github.com/anchore/sbom/sbom/source"
+	"github.com/nextlinux/sbom/sbom/artifact"
+	"github.com/nextlinux/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/pkg/cataloger/generic"
+	"github.com/nextlinux/sbom/sbom/source"
 )
 
 // integrity check

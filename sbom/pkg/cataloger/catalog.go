@@ -10,14 +10,14 @@ import (
 	"github.com/wagoodman/go-partybus"
 	"github.com/wagoodman/go-progress"
 
-	"github.com/anchore/sbom/internal/bus"
-	"github.com/anchore/sbom/internal/log"
-	"github.com/anchore/sbom/sbom/artifact"
-	"github.com/anchore/sbom/sbom/event"
-	"github.com/anchore/sbom/sbom/linux"
-	"github.com/anchore/sbom/sbom/pkg"
-	"github.com/anchore/sbom/sbom/pkg/cataloger/common/cpe"
-	"github.com/anchore/sbom/sbom/source"
+	"github.com/nextlinux/sbom/internal/bus"
+	"github.com/nextlinux/sbom/internal/log"
+	"github.com/nextlinux/sbom/sbom/artifact"
+	"github.com/nextlinux/sbom/sbom/event"
+	"github.com/nextlinux/sbom/sbom/linux"
+	"github.com/nextlinux/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/pkg/cataloger/common/cpe"
+	"github.com/nextlinux/sbom/sbom/source"
 )
 
 // Monitor provides progress-related data for observing the progress of a Catalog() call (published on the event bus).

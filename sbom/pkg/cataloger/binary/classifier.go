@@ -11,13 +11,13 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/anchore/packageurl-go"
-	"github.com/anchore/sbom/internal"
-	"github.com/anchore/sbom/internal/log"
-	"github.com/anchore/sbom/sbom/cpe"
-	"github.com/anchore/sbom/sbom/pkg"
-	"github.com/anchore/sbom/sbom/pkg/cataloger/internal/unionreader"
-	"github.com/anchore/sbom/sbom/source"
+	"github.com/nextlinux/packageurl-go"
+	"github.com/nextlinux/sbom/internal"
+	"github.com/nextlinux/sbom/internal/log"
+	"github.com/nextlinux/sbom/sbom/cpe"
+	"github.com/nextlinux/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/pkg/cataloger/internal/unionreader"
+	"github.com/nextlinux/sbom/sbom/source"
 )
 
 var emptyPURL = packageurl.PackageURL{}

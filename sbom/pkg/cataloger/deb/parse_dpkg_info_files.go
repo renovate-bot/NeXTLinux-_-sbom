@@ -5,8 +5,8 @@ import (
 	"io"
 	"strings"
 
-	"github.com/anchore/sbom/sbom/file"
-	"github.com/anchore/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/file"
+	"github.com/nextlinux/sbom/sbom/pkg"
 )
 
 func parseDpkgMD5Info(reader io.Reader) (findings []pkg.DpkgFileRecord) {

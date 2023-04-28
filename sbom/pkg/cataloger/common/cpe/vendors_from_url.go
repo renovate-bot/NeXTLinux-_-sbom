@@ -4,7 +4,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/anchore/sbom/internal"
+	"github.com/nextlinux/sbom/internal"
 )
 
 var (

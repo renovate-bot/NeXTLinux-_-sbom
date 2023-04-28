@@ -5,7 +5,7 @@ import (
 
 	"github.com/sergi/go-diff/diffmatchpatch"
 
-	"github.com/anchore/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/pkg"
 )
 
 func Test_packageURL(t *testing.T) {

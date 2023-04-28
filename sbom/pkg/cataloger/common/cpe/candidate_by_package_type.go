@@ -1,7 +1,7 @@
 package cpe
 
 import (
-	"github.com/anchore/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/pkg"
 )
 
 // candidateComposite is a convenience when creating the defaultCandidateAdditions set

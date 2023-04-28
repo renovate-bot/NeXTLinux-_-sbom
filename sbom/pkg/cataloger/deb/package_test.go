@@ -5,8 +5,8 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"github.com/anchore/sbom/sbom/linux"
-	"github.com/anchore/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/linux"
+	"github.com/nextlinux/sbom/sbom/pkg"
 )
 
 func Test_packageURL(t *testing.T) {

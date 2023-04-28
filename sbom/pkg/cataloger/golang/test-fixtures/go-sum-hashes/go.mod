@@ -1,4 +1,4 @@
-module github.com/anchore/sbom
+module github.com/nextlinux/sbom
 
 go 1.18
 

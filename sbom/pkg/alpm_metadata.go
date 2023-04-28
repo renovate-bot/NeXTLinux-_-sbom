@@ -6,7 +6,7 @@ import (
 
 	"github.com/scylladb/go-set/strset"
 
-	"github.com/anchore/sbom/sbom/file"
+	"github.com/nextlinux/sbom/sbom/file"
 )
 
 var _ FileOwner = (*AlpmMetadata)(nil)

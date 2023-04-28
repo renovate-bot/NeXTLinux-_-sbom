@@ -3,9 +3,9 @@ package binary
 import (
 	"reflect"
 
-	"github.com/anchore/sbom/sbom/cpe"
-	"github.com/anchore/sbom/sbom/pkg"
-	"github.com/anchore/sbom/sbom/source"
+	"github.com/nextlinux/sbom/sbom/cpe"
+	"github.com/nextlinux/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/source"
 )
 
 func newPackage(classifier classifier, location source.Location, matchMetadata map[string]string) *pkg.Package {

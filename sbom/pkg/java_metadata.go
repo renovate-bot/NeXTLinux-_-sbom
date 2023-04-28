@@ -3,8 +3,8 @@ package pkg
 import (
 	"strings"
 
-	"github.com/anchore/sbom/internal"
-	"github.com/anchore/sbom/sbom/file"
+	"github.com/nextlinux/sbom/internal"
+	"github.com/nextlinux/sbom/sbom/file"
 )
 
 var jenkinsPluginPomPropertiesGroupIDs = []string{

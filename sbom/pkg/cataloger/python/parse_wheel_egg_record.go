@@ -9,8 +9,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/anchore/sbom/internal/log"
-	"github.com/anchore/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/internal/log"
+	"github.com/nextlinux/sbom/sbom/pkg"
 )
 
 // parseWheelOrEggMetadata takes a Python Egg or Wheel (which share the same format and values for our purposes),

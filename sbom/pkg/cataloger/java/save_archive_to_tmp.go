@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/anchore/sbom/internal/log"
+	"github.com/nextlinux/sbom/internal/log"
 )
 
 func saveArchiveToTmp(archiveVirtualPath string, reader io.Reader) (string, string, func(), error) {

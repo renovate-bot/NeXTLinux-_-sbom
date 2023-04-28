@@ -1,6 +1,6 @@
 package cpe
 
-import "github.com/anchore/sbom/sbom/pkg"
+import "github.com/nextlinux/sbom/sbom/pkg"
 
 func candidateVendorsForJavascript(p pkg.Package) fieldCandidateSet {
 	if p.MetadataType != pkg.NpmPackageJSONMetadataType {

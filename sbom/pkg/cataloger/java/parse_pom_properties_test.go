@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/anchore/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/pkg"
 )
 
 func TestParseJavaPomProperties(t *testing.T) {
@@ -16,7 +16,7 @@ func TestParseJavaPomProperties(t *testing.T) {
 		{
 			expected: pkg.PomProperties{
 				Path:       "test-fixtures/pom/small.pom.properties",
-				GroupID:    "org.anchore",
+				GroupID:    "org.nextlinux",
 				ArtifactID: "example-java-app-maven",
 				Version:    "0.1.0",
 			},
@@ -24,7 +24,7 @@ func TestParseJavaPomProperties(t *testing.T) {
 		{
 			expected: pkg.PomProperties{
 				Path:       "test-fixtures/pom/extra.pom.properties",
-				GroupID:    "org.anchore",
+				GroupID:    "org.nextlinux",
 				ArtifactID: "example-java-app-maven",
 				Version:    "0.1.0",
 				Name:       "something-here",
@@ -37,7 +37,7 @@ func TestParseJavaPomProperties(t *testing.T) {
 		{
 			expected: pkg.PomProperties{
 				Path:       "test-fixtures/pom/colon-delimited.pom.properties",
-				GroupID:    "org.anchore",
+				GroupID:    "org.nextlinux",
 				ArtifactID: "example-java-app-maven",
 				Version:    "0.1.0",
 			},
@@ -45,7 +45,7 @@ func TestParseJavaPomProperties(t *testing.T) {
 		{
 			expected: pkg.PomProperties{
 				Path:       "test-fixtures/pom/equals-delimited-with-colons.pom.properties",
-				GroupID:    "org.anchore",
+				GroupID:    "org.nextlinux",
 				ArtifactID: "example-java:app-maven",
 				Version:    "0.1.0:something",
 			},
@@ -53,7 +53,7 @@ func TestParseJavaPomProperties(t *testing.T) {
 		{
 			expected: pkg.PomProperties{
 				Path:       "test-fixtures/pom/colon-delimited-with-equals.pom.properties",
-				GroupID:    "org.anchore",
+				GroupID:    "org.nextlinux",
 				ArtifactID: "example-java=app-maven",
 				Version:    "0.1.0=something",
 			},

@@ -5,9 +5,9 @@ import (
 
 	"github.com/jinzhu/copier"
 
-	"github.com/anchore/sbom/internal"
-	"github.com/anchore/sbom/internal/log"
-	"github.com/anchore/sbom/sbom/artifact"
+	"github.com/nextlinux/sbom/internal"
+	"github.com/nextlinux/sbom/internal/log"
+	"github.com/nextlinux/sbom/sbom/artifact"
 )
 
 // Collection represents a collection of Packages.

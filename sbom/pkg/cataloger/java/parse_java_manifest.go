@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/anchore/sbom/internal/log"
-	"github.com/anchore/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/internal/log"
+	"github.com/nextlinux/sbom/sbom/pkg"
 )
 
 const manifestGlob = "/META-INF/MANIFEST.MF"

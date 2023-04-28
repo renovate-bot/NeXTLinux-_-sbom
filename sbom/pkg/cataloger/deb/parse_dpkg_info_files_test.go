@@ -7,8 +7,8 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/stretchr/testify/require"
 
-	"github.com/anchore/sbom/sbom/file"
-	"github.com/anchore/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/file"
+	"github.com/nextlinux/sbom/sbom/pkg"
 )
 
 func TestMD5SumInfoParsing(t *testing.T) {

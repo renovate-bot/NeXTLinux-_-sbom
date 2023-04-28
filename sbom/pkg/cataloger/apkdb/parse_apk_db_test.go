@@ -12,13 +12,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/anchore/sbom/sbom/artifact"
-	"github.com/anchore/sbom/sbom/file"
-	"github.com/anchore/sbom/sbom/linux"
-	"github.com/anchore/sbom/sbom/pkg"
-	"github.com/anchore/sbom/sbom/pkg/cataloger/generic"
-	"github.com/anchore/sbom/sbom/pkg/cataloger/internal/pkgtest"
-	"github.com/anchore/sbom/sbom/source"
+	"github.com/nextlinux/sbom/sbom/artifact"
+	"github.com/nextlinux/sbom/sbom/file"
+	"github.com/nextlinux/sbom/sbom/linux"
+	"github.com/nextlinux/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/pkg/cataloger/generic"
+	"github.com/nextlinux/sbom/sbom/pkg/cataloger/internal/pkgtest"
+	"github.com/nextlinux/sbom/sbom/source"
 )
 
 func TestExtraFileAttributes(t *testing.T) {

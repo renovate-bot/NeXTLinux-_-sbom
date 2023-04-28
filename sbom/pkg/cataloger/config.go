@@ -1,9 +1,9 @@
 package cataloger
 
 import (
-	"github.com/anchore/sbom/sbom/pkg/cataloger/golang"
-	"github.com/anchore/sbom/sbom/pkg/cataloger/java"
-	"github.com/anchore/sbom/sbom/pkg/cataloger/kernel"
+	"github.com/nextlinux/sbom/sbom/pkg/cataloger/golang"
+	"github.com/nextlinux/sbom/sbom/pkg/cataloger/java"
+	"github.com/nextlinux/sbom/sbom/pkg/cataloger/kernel"
 )
 
 // TODO: these field naming vs helper function naming schemes are inconsistent.

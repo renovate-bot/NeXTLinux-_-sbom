@@ -3,9 +3,9 @@ package golang
 import (
 	"testing"
 
-	"github.com/anchore/sbom/sbom/pkg"
-	"github.com/anchore/sbom/sbom/pkg/cataloger/internal/pkgtest"
-	"github.com/anchore/sbom/sbom/source"
+	"github.com/nextlinux/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/pkg/cataloger/internal/pkgtest"
+	"github.com/nextlinux/sbom/sbom/source"
 )
 
 func TestParseGoMod(t *testing.T) {
@@ -33,9 +33,9 @@ func TestParseGoMod(t *testing.T) {
 			fixture: "test-fixtures/many-packages",
 			expected: []pkg.Package{
 				{
-					Name:         "github.com/anchore/go-testutils",
+					Name:         "github.com/nextlinux/go-testutils",
 					Version:      "v0.0.0-20200624184116-66aa578126db",
-					PURL:         "pkg:golang/github.com/anchore/go-testutils@v0.0.0-20200624184116-66aa578126db",
+					PURL:         "pkg:golang/github.com/nextlinux/go-testutils@v0.0.0-20200624184116-66aa578126db",
 					Locations:    source.NewLocationSet(source.NewLocation("test-fixtures/many-packages")),
 					Language:     pkg.Go,
 					Type:         pkg.GoModulePkg,
@@ -43,9 +43,9 @@ func TestParseGoMod(t *testing.T) {
 					Metadata:     pkg.GolangModMetadata{},
 				},
 				{
-					Name:         "github.com/anchore/go-version",
+					Name:         "github.com/nextlinux/go-version",
 					Version:      "v1.2.2-0.20200701162849-18adb9c92b9b",
-					PURL:         "pkg:golang/github.com/anchore/go-version@v1.2.2-0.20200701162849-18adb9c92b9b",
+					PURL:         "pkg:golang/github.com/nextlinux/go-version@v1.2.2-0.20200701162849-18adb9c92b9b",
 					Locations:    source.NewLocationSet(source.NewLocation("test-fixtures/many-packages")),
 					Language:     pkg.Go,
 					Type:         pkg.GoModulePkg,
@@ -53,9 +53,9 @@ func TestParseGoMod(t *testing.T) {
 					Metadata:     pkg.GolangModMetadata{},
 				},
 				{
-					Name:         "github.com/anchore/stereoscope",
+					Name:         "github.com/nextlinux/stereoscope",
 					Version:      "v0.0.0-20200706164556-7cf39d7f4639",
-					PURL:         "pkg:golang/github.com/anchore/stereoscope@v0.0.0-20200706164556-7cf39d7f4639",
+					PURL:         "pkg:golang/github.com/nextlinux/stereoscope@v0.0.0-20200706164556-7cf39d7f4639",
 					Locations:    source.NewLocationSet(source.NewLocation("test-fixtures/many-packages")),
 					Language:     pkg.Go,
 					Type:         pkg.GoModulePkg,

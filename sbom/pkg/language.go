@@ -3,7 +3,7 @@ package pkg
 import (
 	"strings"
 
-	"github.com/anchore/packageurl-go"
+	"github.com/nextlinux/packageurl-go"
 )
 
 // Language represents a single programming language.

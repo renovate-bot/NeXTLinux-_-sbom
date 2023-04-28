@@ -10,8 +10,8 @@ import (
 	"github.com/scylladb/go-set/strset"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/anchore/sbom/sbom/cpe"
-	"github.com/anchore/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/cpe"
+	"github.com/nextlinux/sbom/sbom/pkg"
 )
 
 func TestGeneratePackageCPEs(t *testing.T) {
@@ -75,7 +75,7 @@ func TestGeneratePackageCPEs(t *testing.T) {
 				MetadataType: pkg.PythonPackageMetadataType,
 				Metadata: pkg.PythonPackageMetadata{
 					Author:      "alex goodman",
-					AuthorEmail: "william.goodman@anchore.com",
+					AuthorEmail: "william.goodman@nextlinux.com",
 				},
 			},
 			expected: []string{
@@ -199,7 +199,7 @@ func TestGeneratePackageCPEs(t *testing.T) {
 			},
 		},
 		{
-			name: "java with URL in metadata", // regression: https://github.com/anchore/grype/issues/417
+			name: "java with URL in metadata", // regression: https://github.com/nextlinux/grype/issues/417
 			p: pkg.Package{
 				Name:         "wstx-asl",
 				Version:      "3.2.7",

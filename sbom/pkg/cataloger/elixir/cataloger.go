@@ -4,7 +4,7 @@ Package elixir provides a concrete Cataloger implementation for elixir specific 
 package elixir
 
 import (
-	"github.com/anchore/sbom/sbom/pkg/cataloger/generic"
+	"github.com/nextlinux/sbom/sbom/pkg/cataloger/generic"
 )
 
 const catalogerName = "elixir-mix-lock-cataloger"

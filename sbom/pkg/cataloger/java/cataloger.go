@@ -4,7 +4,7 @@ Package java provides a concrete Cataloger implementation for Java archives (jar
 package java
 
 import (
-	"github.com/anchore/sbom/sbom/pkg/cataloger/generic"
+	"github.com/nextlinux/sbom/sbom/pkg/cataloger/generic"
 )
 
 // NewJavaCataloger returns a new Java archive cataloger object.

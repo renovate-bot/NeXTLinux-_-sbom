@@ -5,9 +5,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/anchore/sbom/sbom/artifact"
-	"github.com/anchore/sbom/sbom/pkg"
-	"github.com/anchore/sbom/sbom/source"
+	"github.com/nextlinux/sbom/sbom/artifact"
+	"github.com/nextlinux/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/source"
 )
 
 var _ pkg.Cataloger = (*dummy)(nil)

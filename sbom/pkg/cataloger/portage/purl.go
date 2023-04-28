@@ -1,7 +1,7 @@
 package portage
 
 import (
-	"github.com/anchore/packageurl-go"
+	"github.com/nextlinux/packageurl-go"
 )
 
 func packageURL(name, version string) string {

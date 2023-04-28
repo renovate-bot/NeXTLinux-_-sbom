@@ -10,13 +10,13 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/anchore/sbom/internal"
-	"github.com/anchore/sbom/internal/log"
-	"github.com/anchore/sbom/sbom/artifact"
-	"github.com/anchore/sbom/sbom/file"
-	"github.com/anchore/sbom/sbom/pkg"
-	"github.com/anchore/sbom/sbom/pkg/cataloger/generic"
-	"github.com/anchore/sbom/sbom/source"
+	"github.com/nextlinux/sbom/internal"
+	"github.com/nextlinux/sbom/internal/log"
+	"github.com/nextlinux/sbom/sbom/artifact"
+	"github.com/nextlinux/sbom/sbom/file"
+	"github.com/nextlinux/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/pkg/cataloger/generic"
+	"github.com/nextlinux/sbom/sbom/source"
 )
 
 var (

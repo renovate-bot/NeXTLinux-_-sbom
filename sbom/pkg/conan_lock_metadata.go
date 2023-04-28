@@ -3,8 +3,8 @@ package pkg
 import (
 	"strings"
 
-	"github.com/anchore/packageurl-go"
-	"github.com/anchore/sbom/sbom/linux"
+	"github.com/nextlinux/packageurl-go"
+	"github.com/nextlinux/sbom/sbom/linux"
 )
 
 type ConanLockMetadata struct {

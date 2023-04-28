@@ -7,9 +7,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/vifraa/gopom"
 
-	"github.com/anchore/sbom/sbom/pkg"
-	"github.com/anchore/sbom/sbom/pkg/cataloger/internal/pkgtest"
-	"github.com/anchore/sbom/sbom/source"
+	"github.com/nextlinux/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/pkg/cataloger/internal/pkgtest"
+	"github.com/nextlinux/sbom/sbom/source"
 )
 
 func Test_parserPomXML(t *testing.T) {

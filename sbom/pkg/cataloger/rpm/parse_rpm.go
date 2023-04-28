@@ -8,11 +8,11 @@ import (
 	rpmdb "github.com/knqyf263/go-rpmdb/pkg"
 	"github.com/sassoftware/go-rpmutils"
 
-	"github.com/anchore/sbom/sbom/artifact"
-	"github.com/anchore/sbom/sbom/file"
-	"github.com/anchore/sbom/sbom/pkg"
-	"github.com/anchore/sbom/sbom/pkg/cataloger/generic"
-	"github.com/anchore/sbom/sbom/source"
+	"github.com/nextlinux/sbom/sbom/artifact"
+	"github.com/nextlinux/sbom/sbom/file"
+	"github.com/nextlinux/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/pkg/cataloger/generic"
+	"github.com/nextlinux/sbom/sbom/source"
 )
 
 // parseRpm parses a single RPM

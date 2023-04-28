@@ -6,11 +6,11 @@ package kernel
 import (
 	"github.com/hashicorp/go-multierror"
 
-	"github.com/anchore/sbom/internal/log"
-	"github.com/anchore/sbom/sbom/artifact"
-	"github.com/anchore/sbom/sbom/pkg"
-	"github.com/anchore/sbom/sbom/pkg/cataloger/generic"
-	"github.com/anchore/sbom/sbom/source"
+	"github.com/nextlinux/sbom/internal/log"
+	"github.com/nextlinux/sbom/sbom/artifact"
+	"github.com/nextlinux/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/pkg/cataloger/generic"
+	"github.com/nextlinux/sbom/sbom/source"
 )
 
 var _ pkg.Cataloger = (*LinuxKernelCataloger)(nil)

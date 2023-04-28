@@ -8,7 +8,7 @@ import (
 
 	"github.com/mitchellh/mapstructure"
 
-	"github.com/anchore/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/pkg"
 )
 
 const pomPropertiesGlob = "*pom.properties"

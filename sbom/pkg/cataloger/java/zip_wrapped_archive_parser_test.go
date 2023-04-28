@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/anchore/sbom/sbom/source"
+	"github.com/nextlinux/sbom/sbom/source"
 )
 
 func Test_parseZipWrappedJavaArchive(t *testing.T) {

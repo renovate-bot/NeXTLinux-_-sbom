@@ -1,6 +1,6 @@
 package cataloger
 
-import "github.com/anchore/sbom/sbom/source"
+import "github.com/nextlinux/sbom/sbom/source"
 
 type SearchConfig struct {
 	IncludeIndexedArchives   bool

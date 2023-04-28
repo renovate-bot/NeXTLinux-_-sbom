@@ -3,9 +3,9 @@ package php
 import (
 	"strings"
 
-	"github.com/anchore/packageurl-go"
-	"github.com/anchore/sbom/sbom/pkg"
-	"github.com/anchore/sbom/sbom/source"
+	"github.com/nextlinux/packageurl-go"
+	"github.com/nextlinux/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/source"
 )
 
 func newComposerLockPackage(m pkg.PhpComposerJSONMetadata, location ...source.Location) pkg.Package {

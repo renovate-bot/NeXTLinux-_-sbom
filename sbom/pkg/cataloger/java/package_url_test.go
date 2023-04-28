@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/anchore/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/pkg"
 )
 
 func Test_packageURL(t *testing.T) {
@@ -28,15 +28,15 @@ func Test_packageURL(t *testing.T) {
 						},
 					},
 					PomProperties: &pkg.PomProperties{
-						Path:       "META-INF/maven/org.anchore/example-java-app-maven/pom.properties",
-						GroupID:    "org.anchore",
+						Path:       "META-INF/maven/org.nextlinux/example-java-app-maven/pom.properties",
+						GroupID:    "org.nextlinux",
 						ArtifactID: "example-java-app-maven",
 						Version:    "0.1.0",
 						Extra:      make(map[string]string),
 					},
 				},
 			},
-			expect: "pkg:maven/org.anchore/example-java-app-maven@0.1.0",
+			expect: "pkg:maven/org.nextlinux/example-java-app-maven@0.1.0",
 		},
 	}
 	for _, tt := range tests {

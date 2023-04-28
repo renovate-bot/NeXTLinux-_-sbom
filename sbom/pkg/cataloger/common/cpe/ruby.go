@@ -1,6 +1,6 @@
 package cpe
 
-import "github.com/anchore/sbom/sbom/pkg"
+import "github.com/nextlinux/sbom/sbom/pkg"
 
 func candidateVendorsForRuby(p pkg.Package) fieldCandidateSet {
 	metadata, ok := p.Metadata.(pkg.GemMetadata)

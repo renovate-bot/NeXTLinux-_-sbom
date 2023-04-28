@@ -5,8 +5,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/anchore/sbom/internal/log"
-	"github.com/anchore/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/internal/log"
+	"github.com/nextlinux/sbom/sbom/pkg"
 )
 
 // nameAndVersionPattern finds the package name and version (as named capture

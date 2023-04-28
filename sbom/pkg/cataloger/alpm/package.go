@@ -1,11 +1,11 @@
 package alpm
 
 import (
-	"github.com/anchore/packageurl-go"
-	"github.com/anchore/sbom/internal"
-	"github.com/anchore/sbom/sbom/linux"
-	"github.com/anchore/sbom/sbom/pkg"
-	"github.com/anchore/sbom/sbom/source"
+	"github.com/nextlinux/packageurl-go"
+	"github.com/nextlinux/sbom/internal"
+	"github.com/nextlinux/sbom/sbom/linux"
+	"github.com/nextlinux/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/source"
 )
 
 func newPackage(m pkg.AlpmMetadata, release *linux.Release, locations ...source.Location) pkg.Package {

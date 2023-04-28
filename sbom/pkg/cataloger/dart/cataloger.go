@@ -1,7 +1,7 @@
 package dart
 
 import (
-	"github.com/anchore/sbom/sbom/pkg/cataloger/generic"
+	"github.com/nextlinux/sbom/sbom/pkg/cataloger/generic"
 )
 
 const catalogerName = "dartlang-lock-cataloger"

@@ -3,18 +3,18 @@ package java
 import (
 	"fmt"
 
-	"github.com/anchore/sbom/internal/file"
-	"github.com/anchore/sbom/sbom/artifact"
-	"github.com/anchore/sbom/sbom/pkg"
-	"github.com/anchore/sbom/sbom/pkg/cataloger/generic"
-	"github.com/anchore/sbom/sbom/source"
+	"github.com/nextlinux/sbom/internal/file"
+	"github.com/nextlinux/sbom/sbom/artifact"
+	"github.com/nextlinux/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/pkg/cataloger/generic"
+	"github.com/nextlinux/sbom/sbom/source"
 )
 
 var genericZipGlobs = []string{
 	"**/*.zip",
 }
 
-// TODO: when the generic archive cataloger is implemented, this should be removed (https://github.com/anchore/sbom/issues/246)
+// TODO: when the generic archive cataloger is implemented, this should be removed (https://github.com/nextlinux/sbom/issues/246)
 
 // parseZipWrappedJavaArchive is a parser function for java archive contents contained within arbitrary zip files.
 func parseZipWrappedJavaArchive(_ source.FileResolver, _ *generic.Environment, reader source.LocationReadCloser) ([]pkg.Package, []artifact.Relationship, error) {

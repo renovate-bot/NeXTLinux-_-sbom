@@ -1,8 +1,8 @@
 package pkg
 
 import (
-	"github.com/anchore/sbom/sbom/artifact"
-	"github.com/anchore/sbom/sbom/source"
+	"github.com/nextlinux/sbom/sbom/artifact"
+	"github.com/nextlinux/sbom/sbom/source"
 )
 
 // Cataloger describes behavior for an object to participate in parsing container image or file system

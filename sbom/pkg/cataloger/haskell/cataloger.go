@@ -1,7 +1,7 @@
 package haskell
 
 import (
-	"github.com/anchore/sbom/sbom/pkg/cataloger/generic"
+	"github.com/nextlinux/sbom/sbom/pkg/cataloger/generic"
 )
 
 // TODO: it seems that the stack.yaml/stack.lock/cabal.project.freeze have different purposes and could have different installation intentions

@@ -1,9 +1,9 @@
 package java
 
 import (
-	"github.com/anchore/packageurl-go"
-	"github.com/anchore/sbom/sbom/pkg"
-	"github.com/anchore/sbom/sbom/pkg/cataloger/common/cpe"
+	"github.com/nextlinux/packageurl-go"
+	"github.com/nextlinux/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/pkg/cataloger/common/cpe"
 )
 
 // PackageURL returns the PURL for the specific java package (see https://github.com/package-url/purl-spec)

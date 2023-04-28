@@ -12,9 +12,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/anchore/stereoscope/pkg/imagetest"
-	"github.com/anchore/sbom/sbom/pkg"
-	"github.com/anchore/sbom/sbom/source"
+	"github.com/nextlinux/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/source"
+	"github.com/nextlinux/stereoscope/pkg/imagetest"
 )
 
 func Test_Cataloger_DefaultClassifiers_PositiveCases(t *testing.T) {

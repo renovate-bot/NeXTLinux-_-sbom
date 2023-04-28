@@ -3,7 +3,7 @@ package rpm
 import (
 	"testing"
 
-	"github.com/anchore/sbom/sbom/pkg/cataloger/internal/pkgtest"
+	"github.com/nextlinux/sbom/sbom/pkg/cataloger/internal/pkgtest"
 )
 
 func Test_DBCataloger_Globs(t *testing.T) {

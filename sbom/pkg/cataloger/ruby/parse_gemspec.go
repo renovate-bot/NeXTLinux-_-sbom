@@ -9,11 +9,11 @@ import (
 
 	"github.com/mitchellh/mapstructure"
 
-	"github.com/anchore/sbom/internal"
-	"github.com/anchore/sbom/sbom/artifact"
-	"github.com/anchore/sbom/sbom/pkg"
-	"github.com/anchore/sbom/sbom/pkg/cataloger/generic"
-	"github.com/anchore/sbom/sbom/source"
+	"github.com/nextlinux/sbom/internal"
+	"github.com/nextlinux/sbom/sbom/artifact"
+	"github.com/nextlinux/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/pkg/cataloger/generic"
+	"github.com/nextlinux/sbom/sbom/source"
 )
 
 var _ generic.Parser = parseGemFileLockEntries
@@ -31,7 +31,7 @@ var patterns = map[string]*regexp.Regexp{
 	"version": regexp.MustCompile(`.*\.version\s*=\s*["']{1}(?P<version>.*)["']{1} *`),
 
 	// match example:
-	// homepage = "https://github.com/anchore/sbom".freeze   --->   https://github.com/anchore/sbom
+	// homepage = "https://github.com/nextlinux/sbom".freeze   --->   https://github.com/nextlinux/sbom
 	"homepage": regexp.MustCompile(`.*\.homepage\s*=\s*["']{1}(?P<homepage>.*)["']{1} *`),
 
 	// match example:       files = ["exe/bundle".freeze, "exe/bundler".freeze]    --->    "exe/bundle".freeze, "exe/bundler".freeze

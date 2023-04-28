@@ -4,7 +4,7 @@ Package erlang provides a concrete Cataloger implementation for erlang specific 
 package erlang
 
 import (
-	"github.com/anchore/sbom/sbom/pkg/cataloger/generic"
+	"github.com/nextlinux/sbom/sbom/pkg/cataloger/generic"
 )
 
 const catalogerName = "erlang-rebar-lock-cataloger"

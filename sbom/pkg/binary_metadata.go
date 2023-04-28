@@ -1,6 +1,6 @@
 package pkg
 
-import "github.com/anchore/sbom/sbom/source"
+import "github.com/nextlinux/sbom/sbom/source"
 
 type BinaryMetadata struct {
 	Matches []ClassifierMatch `mapstructure:"Matches" json:"matches"`

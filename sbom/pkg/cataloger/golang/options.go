@@ -7,7 +7,7 @@ import (
 
 	"github.com/mitchellh/go-homedir"
 
-	"github.com/anchore/sbom/internal/log"
+	"github.com/nextlinux/sbom/internal/log"
 )
 
 const (

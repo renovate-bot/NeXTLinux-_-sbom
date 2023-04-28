@@ -5,7 +5,7 @@ import (
 
 	"github.com/sergi/go-diff/diffmatchpatch"
 
-	"github.com/anchore/sbom/sbom/pkg"
+	"github.com/nextlinux/sbom/sbom/pkg"
 )
 
 func TestExtractInfoFromJavaArchiveFilename(t *testing.T) {
@@ -157,7 +157,7 @@ func TestExtractInfoFromJavaArchiveFilename(t *testing.T) {
 			ty:        pkg.JavaPkg,
 		},
 		{
-			// regression: https://github.com/anchore/sbom/issues/255
+			// regression: https://github.com/nextlinux/sbom/issues/255
 			filename:  "BOOT-INF/lib/spring-data-r2dbc-1.1.0.RELEASE.jar",
 			version:   "1.1.0.RELEASE",
 			extension: "jar",

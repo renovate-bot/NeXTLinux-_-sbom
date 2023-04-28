@@ -4,7 +4,7 @@ Package php provides a concrete Cataloger implementation for PHP ecosystem files
 package php
 
 import (
-	"github.com/anchore/sbom/sbom/pkg/cataloger/generic"
+	"github.com/nextlinux/sbom/sbom/pkg/cataloger/generic"
 )
 
 // NewComposerInstalledCataloger returns a new cataloger for PHP installed.json files.

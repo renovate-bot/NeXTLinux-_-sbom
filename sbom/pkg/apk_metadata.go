@@ -10,7 +10,7 @@ import (
 	"github.com/mitchellh/mapstructure"
 	"github.com/scylladb/go-set/strset"
 
-	"github.com/anchore/sbom/sbom/file"
+	"github.com/nextlinux/sbom/sbom/file"
 )
 
 const ApkDBGlob = "**/lib/apk/db/installed"

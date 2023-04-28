@@ -1,0 +1,249 @@
+release:
+  prerelease: auto
+  draft: false
+
+env:
+  # required to support multi architecture docker builds
+  - DOCKER_CLI_EXPERIMENTAL=enabled
+  - CGO_ENABLED=0
+
+builds:
+  - id: linux-build
+    dir: ./cmd/sbom
+    binary: sbom
+    goos:
+      - linux
+    goarch:
+      - amd64
+      - arm64
+      - ppc64le
+      - s390x
+    # set the modified timestamp on the output binary to the git timestamp to ensure a reproducible build
+    mod_timestamp: &build-timestamp '{{ .CommitTimestamp }}'
+    ldflags: &build-ldflags |
+      -w
+      -s
+      -extldflags '-static'
+      -X github.com/nextlinux/sbom/internal/version.version={{.Version}}
+      -X github.com/nextlinux/sbom/internal/version.gitCommit={{.Commit}}
+      -X github.com/nextlinux/sbom/internal/version.buildDate={{.Date}}
+      -X github.com/nextlinux/sbom/internal/version.gitDescription={{.Summary}}
+
+  - id: darwin-build
+    dir: ./cmd/sbom
+    binary: sbom
+    goos:
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    mod_timestamp: *build-timestamp
+    ldflags: *build-ldflags
+    hooks:
+      post:
+        - cmd: .tmp/quill sign-and-notarize "{{ .Path }}" --dry-run={{ .IsSnapshot }} --ad-hoc={{ .IsSnapshot }} -vv
+          env:
+            - QUILL_LOG_FILE=/tmp/quill-{{ .Target }}.log
+
+  - id: windows-build
+    dir: ./cmd/sbom
+    binary: sbom
+    goos:
+      - windows
+    goarch:
+      - amd64
+    mod_timestamp: *build-timestamp
+    ldflags: *build-ldflags
+
+archives:
+  - id: linux-archives
+    builds:
+      - linux-build
+
+  # note: the signing process is depending on tar.gz archives. If this format changes then .github/scripts/apple-signing/*.sh will need to be adjusted
+  - id: darwin-archives
+    builds:
+      - darwin-build
+
+  - id: windows-archives
+    format: zip
+    builds:
+      - windows-build
+
+nfpms:
+  - license: "Apache 2.0"
+    maintainer: "Nextlinux, Inc"
+    homepage: &website "https://github.com/nextlinux/sbom"
+    description: &description "A tool that generates a Software Bill Of Materials (SBOM) from container images and filesystems"
+    formats:
+      - rpm
+      - deb
+
+brews:
+  - tap:
+      owner: nextlinux
+      name: homebrew-sbom
+      token: "{{.Env.GITHUB_BREW_TOKEN}}"
+    ids:
+      - darwin-archives
+      - linux-archives
+    homepage: *website
+    description: *description
+    license: "Apache License 2.0"
+
+dockers:
+  - image_templates:
+      - nextlinux/sbom:debug
+      - nextlinux/sbom:{{.Tag}}-debug
+      - ghcr.io/nextlinux/sbom:debug
+      - ghcr.io/nextlinux/sbom:{{.Tag}}-debug
+    goarch: amd64
+    dockerfile: Dockerfile.debug
+    use: buildx
+    build_flag_templates:
+      - "--platform=linux/amd64"
+      - "--build-arg=BUILD_DATE={{.Date}}"
+      - "--build-arg=BUILD_VERSION={{.Version}}"
+      - "--build-arg=VCS_REF={{.FullCommit}}"
+      - "--build-arg=VCS_URL={{.GitURL}}"
+
+  - image_templates:
+      - nextlinux/sbom:debug-arm64v8
+      - nextlinux/sbom:{{.Tag}}-debug-arm64v8
+      - ghcr.io/nextlinux/sbom:debug-arm64v8
+      - ghcr.io/nextlinux/sbom:{{.Tag}}-debug-arm64v8
+    goarch: arm64
+    dockerfile: Dockerfile.debug
+    use: buildx
+    build_flag_templates:
+      - "--platform=linux/arm64/v8"
+      - "--build-arg=BUILD_DATE={{.Date}}"
+      - "--build-arg=BUILD_VERSION={{.Version}}"
+      - "--build-arg=VCS_REF={{.FullCommit}}"
+      - "--build-arg=VCS_URL={{.GitURL}}"
+
+  - image_templates:
+      - nextlinux/sbom:debug-ppc64le
+      - nextlinux/sbom:{{.Tag}}-debug-ppc64le
+      - ghcr.io/nextlinux/sbom:debug-ppc64le
+      - ghcr.io/nextlinux/sbom:{{.Tag}}-debug-ppc64le
+    goarch: ppc64le
+    dockerfile: Dockerfile.debug
+    use: buildx
+    build_flag_templates:
+      - "--platform=linux/ppc64le"
+      - "--build-arg=BUILD_DATE={{.Date}}"
+      - "--build-arg=BUILD_VERSION={{.Version}}"
+      - "--build-arg=VCS_REF={{.FullCommit}}"
+      - "--build-arg=VCS_URL={{.GitURL}}"
+
+  - image_templates:
+      - nextlinux/sbom:debug-s390x
+      - nextlinux/sbom:{{.Tag}}-debug-s390x
+      - ghcr.io/nextlinux/sbom:debug-s390x
+      - ghcr.io/nextlinux/sbom:{{.Tag}}-debug-s390x
+    goarch: s390x
+    dockerfile: Dockerfile.debug
+    use: buildx
+    build_flag_templates:
+      - "--platform=linux/s390x"
+      - "--build-arg=BUILD_DATE={{.Date}}"
+      - "--build-arg=BUILD_VERSION={{.Version}}"
+      - "--build-arg=VCS_REF={{.FullCommit}}"
+      - "--build-arg=VCS_URL={{.GitURL}}"
+
+  - image_templates:
+      - nextlinux/sbom:latest
+      - nextlinux/sbom:{{.Tag}}
+      - ghcr.io/nextlinux/sbom:latest
+      - ghcr.io/nextlinux/sbom:{{.Tag}}
+    goarch: amd64
+    dockerfile: Dockerfile
+    use: buildx
+    build_flag_templates:
+      - "--platform=linux/amd64"
+      - "--build-arg=BUILD_DATE={{.Date}}"
+      - "--build-arg=BUILD_VERSION={{.Version}}"
+      - "--build-arg=VCS_REF={{.FullCommit}}"
+      - "--build-arg=VCS_URL={{.GitURL}}"
+
+  - image_templates:
+      - nextlinux/sbom:{{.Tag}}-arm64v8
+      - ghcr.io/nextlinux/sbom:{{.Tag}}-arm64v8
+    goarch: arm64
+    dockerfile: Dockerfile
+    use: buildx
+    build_flag_templates:
+      - "--platform=linux/arm64/v8"
+      - "--build-arg=BUILD_DATE={{.Date}}"
+      - "--build-arg=BUILD_VERSION={{.Version}}"
+      - "--build-arg=VCS_REF={{.FullCommit}}"
+      - "--build-arg=VCS_URL={{.GitURL}}"
+
+  - image_templates:
+      - nextlinux/sbom:{{.Tag}}-ppc64le
+      - ghcr.io/nextlinux/sbom:{{.Tag}}-ppc64le
+    goarch: ppc64le
+    dockerfile: Dockerfile
+    use: buildx
+    build_flag_templates:
+      - "--platform=linux/ppc64le"
+      - "--build-arg=BUILD_DATE={{.Date}}"
+      - "--build-arg=BUILD_VERSION={{.Version}}"
+      - "--build-arg=VCS_REF={{.FullCommit}}"
+      - "--build-arg=VCS_URL={{.GitURL}}"
+
+  - image_templates:
+      - nextlinux/sbom:{{.Tag}}-s390x
+      - ghcr.io/nextlinux/sbom:{{.Tag}}-s390x
+    goarch: s390x
+    dockerfile: Dockerfile
+    use: buildx
+    build_flag_templates:
+      - "--platform=linux/s390x"
+      - "--build-arg=BUILD_DATE={{.Date}}"
+      - "--build-arg=BUILD_VERSION={{.Version}}"
+      - "--build-arg=VCS_REF={{.FullCommit}}"
+      - "--build-arg=VCS_URL={{.GitURL}}"
+
+docker_manifests:
+  - name_template: nextlinux/sbom:latest
+    image_templates:
+      - nextlinux/sbom:{{.Tag}}
+      - nextlinux/sbom:{{.Tag}}-arm64v8
+      - nextlinux/sbom:{{.Tag}}-ppc64le
+      - nextlinux/sbom:{{.Tag}}-s390x
+
+  - name_template: nextlinux/sbom:debug
+      - nextlinux/sbom:{{.Tag}}-debug
+      - nextlinux/sbom:{{.Tag}}-debug-arm64v8
+      - nextlinux/sbom:{{.Tag}}-debug-ppc64le
+      - nextlinux/sbom:{{.Tag}}-debug-s390x
+
+  - name_template: nextlinux/sbom:{{.Tag}}
+    image_templates:
+      - nextlinux/sbom:{{.Tag}}
+      - nextlinux/sbom:{{.Tag}}-arm64v8
+      - nextlinux/sbom:{{.Tag}}-ppc64le
+      - nextlinux/sbom:{{.Tag}}-s390x
+
+  - name_template: ghcr.io/nextlinux/sbom:latest
+    image_templates:
+      - ghcr.io/nextlinux/sbom:{{.Tag}}
+      - ghcr.io/nextlinux/sbom:{{.Tag}}-arm64v8
+      - ghcr.io/nextlinux/sbom:{{.Tag}}-ppc64le
+      - ghcr.io/nextlinux/sbom:{{.Tag}}-s390x
+
+  - name_template: ghcr.io/nextlinux/sbom:debug
+    image_templates:
+      - ghcr.io/nextlinux/sbom:{{.Tag}}-debug
+      - ghcr.io/nextlinux/sbom:{{.Tag}}-debug-arm64v8
+      - ghcr.io/nextlinux/sbom:{{.Tag}}-debug-ppc64le
+      - ghcr.io/nextlinux/sbom:{{.Tag}}-debug-s390x
+
+  - name_template: ghcr.io/nextlinux/sbom:{{.Tag}}
+    image_templates:
+      - ghcr.io/nextlinux/sbom:{{.Tag}}
+      - ghcr.io/nextlinux/sbom:{{.Tag}}-arm64v8
+      - ghcr.io/nextlinux/sbom:{{.Tag}}-ppc64le
+      - ghcr.io/nextlinux/sbom:{{.Tag}}-s390x

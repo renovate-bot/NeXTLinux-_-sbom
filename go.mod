@@ -81,7 +81,7 @@ require (
 	github.com/nextlinux/go-version v1.2.1 // indirect
 	github.com/nextlinux/gologger v0.0.0-20230422172100-0f5bbbc4c752 // indirect
 	github.com/nextlinux/packageurl-go v0.1.0 // indirect
-	github.com/nextlinux/stereoscope v0.0.0-20230423100046-6356a276e976 // indirect
+	github.com/anchore/stereoscope v0.0.0-20230423100046-6356a276e976 // indirect
 	github.com/nwaples/rardecode v1.1.0 // indirect
 	github.com/olekukonko/tablewriter v0.0.5 // indirect
 	github.com/opencontainers/go-digest v1.0.0 // indirect

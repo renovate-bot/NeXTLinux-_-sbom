@@ -22,10 +22,10 @@ jobs:
           stable: ${{ env.GO_STABLE_VERSION }}
 
       - run: |
-          LATEST_VERSION=$(git ls-remote https://github.com/nextlinux/stereoscope main | head -n1 | awk '{print $1;}')
+          LATEST_VERSION=$(git ls-remote https://github.com/anchore/stereoscope main | head -n1 | awk '{print $1;}')
 
           # update go.mod
-          go get github.com/nextlinux/stereoscope@$LATEST_VERSION
+          go get github.com/anchore/stereoscope@$LATEST_VERSION
           go mod tidy
 
           # export the version for use with create-pull-request

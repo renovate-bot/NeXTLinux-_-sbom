@@ -80,12 +80,6 @@ jobs:
       - name: Validate sbom output against the CycloneDX schema
         run: make validate-cyclonedx-schema
 
-      - name: Restore integration test cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ github.workspace }}/test/integration/test-fixtures/cache
-          key: ${{ runner.os }}-integration-test-cache-${{ hashFiles('test/integration/test-fixtures/cache.fingerprint') }}
-
       - name: Run integration tests
         run: make integration
 

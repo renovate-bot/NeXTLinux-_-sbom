@@ -109,6 +109,13 @@ require (
 	github.com/mgutz/ansi v0.0.0-20200706080929-d51e80ef957d // indirect
 	github.com/mitchellh/copystructure v1.0.0 // indirect
 	github.com/mitchellh/reflectwalk v1.0.0 // indirect
+	github.com/nextlinux/go-macholibre v0.0.0-20230428025715-583cee012919 // indirect
+	github.com/nextlinux/go-struct-converter v0.0.0-20230428031829-4a0c7341a7f3 // indirect
+	github.com/nextlinux/go-testutils v0.0.0-20230423054508-482fff308e0e // indirect
+	github.com/nextlinux/go-version v1.2.1 // indirect
+	github.com/nextlinux/gologger v0.0.0-20230422172100-0f5bbbc4c752 // indirect
+	github.com/nextlinux/packageurl-go v0.1.0 // indirect
+	github.com/anchore/stereoscope v0.0.0-20230423100046-6356a276e976 // indirect
 	github.com/nwaples/rardecode v1.1.0 // indirect
 	github.com/opencontainers/image-spec v1.1.0-rc2.0.20221005185240-3a7f492d3f1b // indirect
 	github.com/pelletier/go-toml/v2 v2.0.6 // indirect

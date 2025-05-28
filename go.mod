@@ -25,7 +25,7 @@ require (
 	github.com/jinzhu/copier v0.3.5
 	github.com/knqyf263/go-rpmdb b97c85e63254
 	github.com/mholt/archiver/v3 v3.5.1
-	github.com/microsoft/go-rustaudit v0.0.0-20220808201409-204dfee52032
+	github.com/microsoft/go-rustaudit e20ec32e963c
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/mitchellh/hashstructure/v2 v2.0.2
 	github.com/mitchellh/mapstructure v1.5.0

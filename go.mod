@@ -49,7 +49,7 @@ require (
 	github.com/spf13/viper v1.15.0
 	github.com/stretchr/testify v1.8.2
 	github.com/vbatts/go-mtree v0.5.3
-	github.com/vifraa/gopom v0.2.1
+	github.com/vifraa/gopom v0.2.2
 	github.com/wagoodman/go-partybus v0.0.0-20210627031916-db1f5573bbc5
 	github.com/wagoodman/go-progress v0.0.0-20230301185719-21920a456ad5
 	github.com/wagoodman/jotframe v0.0.0-20211129225309-56b0d0a4aebb

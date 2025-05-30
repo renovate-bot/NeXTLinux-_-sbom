@@ -3,7 +3,7 @@ module github.com/nextlinux/sbom
 go 1.19
 
 require (
-	github.com/CycloneDX/cyclonedx-go v0.7.1
+	github.com/CycloneDX/cyclonedx-go v0.9.2
 	github.com/Masterminds/sprig/v3 v3.2.3
 	github.com/acobaugh/osrelease v0.1.0
 	github.com/adrg/xdg v0.4.0

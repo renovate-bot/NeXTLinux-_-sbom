@@ -34,31 +34,31 @@ jobs:
         uses: ./.github/actions/bootstrap
 
       - name: Restore Java test-fixture cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: sbom/pkg/cataloger/java/test-fixtures/java-builds/packages
           key: ${{ runner.os }}-unit-java-cache-${{ hashFiles( 'sbom/pkg/cataloger/java/test-fixtures/java-builds/cache.fingerprint' ) }}
 
       - name: Restore RPM test-fixture cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: sbom/pkg/cataloger/rpm/test-fixtures/rpms
           key: ${{ runner.os }}-unit-rpm-cache-${{ hashFiles( 'sbom/pkg/cataloger/rpm/test-fixtures/rpms.fingerprint' ) }}
 
       - name: Restore go binary test-fixture cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: sbom/pkg/cataloger/golang/test-fixtures/archs/binaries
           key: ${{ runner.os }}-unit-go-binaries-cache-${{ hashFiles( 'sbom/pkg/cataloger/golang/test-fixtures/archs/binaries.fingerprint' ) }}
 
       - name: Restore binary cataloger test-fixture cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: sbom/pkg/cataloger/binary/test-fixtures/classifiers/dynamic
           key: ${{ runner.os }}-unit-binary-cataloger-cache-${{ hashFiles( 'sbom/pkg/cataloger/binary/test-fixtures/cache.fingerprint' ) }}
 
       - name: Restore Kernel test-fixture cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: sbom/pkg/cataloger/kernel/test-fixtures/cache
           key: ${{ runner.os }}-unit-kernel-cache-${{ hashFiles( 'sbom/pkg/cataloger/kernel/test-fixtures/cache.fingerprint' ) }}
@@ -107,7 +107,7 @@ jobs:
       # why not use actions/upload-artifact? It is very slow (3 minutes to upload ~600MB of data, vs 10 seconds with this approach).
       # see https://github.com/actions/upload-artifact/issues/199 for more info
       - name: Upload snapshot artifacts
-        uses: actions/cache/save@v3
+        uses: actions/cache/save@v4
         with:
           path: snapshot
           key: snapshot-build-${{ github.run_id }}
@@ -122,7 +122,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Download snapshot build
-        uses: actions/cache/restore@v3
+        uses: actions/cache/restore@v4
         with:
           path: snapshot
           key: snapshot-build-${{ github.run_id }}
@@ -132,7 +132,7 @@ jobs:
 
       - name: Restore install.sh test image cache
         id: install-test-image-cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ${{ github.workspace }}/test/install/cache
           key: ${{ runner.os }}-install-test-image-cache-${{ hashFiles('test/install/cache.fingerprint') }}
@@ -158,14 +158,14 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Download snapshot build
-        uses: actions/cache/restore@v3
+        uses: actions/cache/restore@v4
         with:
           path: snapshot
           key: snapshot-build-${{ github.run_id }}
 
       - name: Restore docker image cache for compare testing
         id: mac-compare-testing-cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: image.tar
           key: ${{ runner.os }}-${{ hashFiles('test/compare/mac.sh') }}
@@ -189,13 +189,13 @@ jobs:
         uses: ./.github/actions/bootstrap
 
       - name: Restore CLI test-fixture cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ${{ github.workspace }}/test/cli/test-fixtures/cache
           key: ${{ runner.os }}-cli-test-cache-${{ hashFiles('test/cli/test-fixtures/cache.fingerprint') }}
 
       - name: Download snapshot build
-        uses: actions/cache/restore@v3
+        uses: actions/cache/restore@v4
         with:
           path: snapshot
           key: snapshot-build-${{ github.run_id }}

@@ -35,7 +35,7 @@ jobs:
           OUTPUT="${OUTPUT//$'\r'/'%0D'}" # URL encode all '\r' characters
           echo "result=$OUTPUT" >> $GITHUB_OUTPUT
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: benchmark-test-results
           path: test/results/**/*

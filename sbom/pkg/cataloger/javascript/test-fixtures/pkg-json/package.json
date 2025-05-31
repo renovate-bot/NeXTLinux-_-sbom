@@ -79,7 +79,7 @@
     "libnpmhook": "^5.0.3",
     "libnpmorg": "^1.0.1",
     "libnpmsearch": "^2.0.2",
-    "libnpmteam": "^1.0.2",
+    "libnpmteam": "^8.0.0",
     "libnpx": "^10.2.2",
     "lock-verify": "^2.1.0",
     "lockfile": "^1.0.4",

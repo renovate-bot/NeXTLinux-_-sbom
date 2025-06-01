@@ -12,7 +12,7 @@ INSTALL_REQUIRES = [
     'pathlib2>=2.2.0;python_version=="3.6"',  # python_version is ignored
     'pathlib3==2.2.0;python_version<"3.6"',  # this is caught
     'colorama;sys_platform=="win32"',
-    "pluggy>=0.12,<1.0",
+    "pluggy>=1.6,<1.7",
     'importlib-metadata>=0.12;python_version<"3.8"',
     "wcwidth",
 ]

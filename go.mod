@@ -21,7 +21,7 @@ require (
 	github.com/google/uuid v1.3.0
 	github.com/gookit/color v1.5.3
 	github.com/hashicorp/go-multierror v1.1.1
-	github.com/invopop/jsonschema v0.7.0
+	github.com/invopop/jsonschema v0.13.0
 	github.com/jinzhu/copier v0.3.5
 	github.com/knqyf263/go-rpmdb b97c85e63254
 	github.com/mholt/archiver/v3 v3.5.1

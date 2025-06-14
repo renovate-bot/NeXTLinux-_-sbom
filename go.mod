@@ -16,7 +16,7 @@ require (
 	github.com/go-git/go-git/v5 v5.6.1
 	github.com/go-test/deep v1.1.0
 	github.com/google/go-cmp v0.5.9
-	github.com/google/go-containerregistry v0.14.0
+	github.com/google/go-containerregistry v0.20.6
 	github.com/google/licensecheck v0.3.1
 	github.com/google/uuid v1.3.0
 	github.com/gookit/color v1.5.3

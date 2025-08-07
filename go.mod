@@ -7,7 +7,7 @@ require (
 	github.com/Masterminds/sprig/v3 v3.2.3
 	github.com/acobaugh/osrelease v0.1.0
 	github.com/adrg/xdg v0.4.0
-	github.com/bmatcuk/doublestar/v4 v4.6.0
+	github.com/bmatcuk/doublestar/v4 v4.9.1
 	github.com/deitch/magic v0.0.0-20230404182410-1ff89d7342da
 	github.com/docker/docker v23.0.5+incompatible
 	github.com/dustin/go-humanize v1.0.1

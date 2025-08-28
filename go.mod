@@ -19,7 +19,7 @@ require (
 	github.com/google/go-containerregistry v0.14.0
 	github.com/google/licensecheck v0.3.1
 	github.com/google/uuid v1.3.0
-	github.com/gookit/color v1.5.3
+	github.com/gookit/color v1.6.0
 	github.com/hashicorp/go-multierror v1.1.1
 	github.com/invopop/jsonschema v0.7.0
 	github.com/jinzhu/copier v0.3.5

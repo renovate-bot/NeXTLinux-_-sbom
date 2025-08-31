@@ -236,7 +236,7 @@ limitations under the License.
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <commons.encoding>UTF-8</commons.encoding>
         <checkstyle.header.file>${basedir}/LICENSE-header.txt</checkstyle.header.file>
-        <checkstyle.version>2.17</checkstyle.version>
+        <checkstyle.version>3.6.0</checkstyle.version>
         <commons.clirr.version>2.8</commons.clirr.version>
     </properties>
     <build>

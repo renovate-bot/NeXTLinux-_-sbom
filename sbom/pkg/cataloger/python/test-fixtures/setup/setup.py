@@ -33,7 +33,7 @@ def main():
                 "xmlschema",
             ],
             "checkqa-mypy": [
-                "mypy==v0.770",  # this is caught
+                "mypy==1.18.1",  # this is caught
                 " mypy1==v0.770",  # this is caught
                 " mypy2 == v0.770", ' mypy3== v0.770',  # this is caught
             ],

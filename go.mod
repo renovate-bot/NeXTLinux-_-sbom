@@ -59,7 +59,7 @@ require (
 	golang.org/x/term v0.7.0
 	gopkg.in/yaml.v2 v2.4.0
 	gopkg.in/yaml.v3 v3.0.1
-	modernc.org/sqlite v1.22.1
+	modernc.org/sqlite v1.39.0
 )
 
 require (
